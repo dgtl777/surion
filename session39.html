@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 39</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-image: linear-gradient(purple, red);
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+        }
+
+        h1 {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Multiplication Table</h1>
+    </header>
+    <input type="text" name="" id="num" placeholder="Enter number">
+    <input type="text" name="" id="mul" placeholder="Enter multiple">
+    <button onclick="calculate()">Calculate</button>
+    <h2>Result</h2>
+</body>
+<script>
+    function calculate() {
+        var num = document.getElementById("num").value;
+        var mul = document.getElementById("mul").value;
+
+        var count = 1;
+
+        while (count <= mul) {
+            var result = num * count;
+            var text = num + " X " + count + " = " + result;
+            var element = document.createElement("h3");
+            element.innerText = text;
+            document.body.append(element);
+            count = count + 1;
+        }
+
+    }
+</script>
+
+</html>

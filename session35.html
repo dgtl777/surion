@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 35</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-image:
+                linear-gradient(violet, white);
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        h2 {
+            color: yellow;
+            animation-name: colorChange;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes colorChange {
+            from {
+                color: red;
+            }
+
+            to {
+                color: yellow;
+            }
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            margin: auto;
+            animation-name: changeBox;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes changeBox {
+            from {
+                transform: rotate(0deg);
+                border-radius: 0;
+                margin-top: 0px;
+                background-color: red;
+            }
+
+            to {
+                transform: rotate(360deg);
+                border-radius: 50%;
+                margin-top: 300px;
+                background-color: yellow;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>CSS Animation</h1>
+    </header>
+    <h2>Color Changing Text Animation</h2>
+    <div class="box">
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 36</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-image: linear-gradient(palegreen, yellow);
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        h1 {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 id="score">Score: 0</h1>
+        <h1>Quiz App</h1>
+    </header>
+    <h3>1. Which is the tallest building in the world?</h3>
+    <label for="">Burj Khalifa</label>
+    <input type="radio" name="building" id="" value="burj">
+    <label for="">Twin Tower</label>
+    <input type="radio" name="building" id="" value="twin">
+    <label for="">Big Ben</label>
+    <input type="radio" name="building" id="" value="ben">
+    <label for="">Eiffel Tower</label>
+    <input type="radio" name="building" id="" value="eiffel">
+
+    <h3>2. What is the capital of India?</h3>
+    <label for="">New Delhi</label>
+    <input type="radio" name="capital" id="" value="delhi">
+    <label for="">Chennai</label>
+    <input type="radio" name="capital" id="" value="chennai">
+    <label for="">Kolkata</label>
+    <input type="radio" name="capital" id="" value="kolkata">
+    <label for="">Lucknow</label>
+    <input type="radio" name="capital" id="" value="lucknow">
+
+    <h3>3. Which is the fastest animal in the world?</h3>
+    <label for="">Lion</label>
+    <input type="radio" name="fast" id="" value="lion">
+    <label for="">Tiger</label>
+    <input type="radio" name="fast" id="" value="tiger">
+    <label for="">Dog</label>
+    <input type="radio" name="fast" id="" value="dog">
+    <label for="">Cheetah</label>
+    <input type="radio" name="fast" id="" value="cheetah">
+
+    <h3>4. Which country took over most of the world?</h3>
+    <label for="">England</label>
+    <input type="radio" name="country" id="" value="england">
+    <label for="y">Germany</label>
+    <input type="radio" name="country" id="" value="germany">
+    <label for="">France</label>
+    <input type="radio" name="country" id="" value="france">
+    <label for="">China</label>
+    <input type="radio" name="country" id="" value="china">
+
+    <h3>5. How many planets are there in the solar system?</h3>
+    <label for="">7</label>
+    <input type="radio" name="planet" id="" value="7">
+    <label for="">8</label>
+    <input type="radio" name="planet" id="" value="8">
+    <label for="">9</label>
+    <input type="radio" name="planet" id="" value="9">
+    <label for="">10</label>
+    <input type="radio" name="planet" id="" value="10"><br><br>
+
+    <button onclick="check()">Submit Answer</button>
+
+</body>
+<script>
+    var score = 0;
+    function check() {
+        var building = document.querySelector('input[name="building"]:checked')
+            .value;
+        if (building == "burj") {
+            score = score + 1;
+        }
+        var capital = document.querySelector('input[name="capital"]:checked')
+            .value;
+        if (capital == "delhi") {
+            score = score + 1;
+        }
+        var fast = document.querySelector('input[name="fast"]:checked')
+            .value;
+        if (fast == "cheetah") {
+            score = score + 1;
+        }
+        var country = document.querySelector('input[name="country"]:checked')
+            .value;
+        if (country == "england") {
+            score = score + 1;
+        }
+        var planet = document.querySelector('input[name="planet"]:checked')
+            .value;
+        if (planet == "8") {
+            score = score + 1;
+        }
+        document.getElementById("score").innerText =
+            "Score: " + score;
+
+    }
+</script>
+
+</html>
